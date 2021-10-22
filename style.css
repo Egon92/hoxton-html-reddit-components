@@ -1,0 +1,143 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  img{
+      width: 100%;
+  }
+  .container {
+      display: grid;
+      grid-template: 
+      
+      "header" auto 
+      "main" 1fr /
+        1fr;
+
+      height: 100vh;
+      /* width: 100vw; */
+  }
+
+  .header {
+      background-color:rgba(20, 20, 192, 0.356);
+      grid-area: header;
+
+  }
+  .main {
+      background-color: rgba(255, 0, 0, 0.377);
+      grid-area: main;
+  }
+.main{
+    display: grid;
+    grid-template: 
+    "trending trending" auto
+    "posts side-bar"  1fr/
+     1fr 200px;
+     height: 100vh;
+}
+.trending{
+    background-color: chartreuse;
+    grid-area: trending;
+}
+.posts{
+    /* background-color:darkmagenta; */
+    grid-area: posts;
+}
+.side-bar{
+    background-color: gray;
+    grid-area: side-bar;
+}
+.trending{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
+    /* align-content: center; */
+    grid-gap: 10px;
+    padding: 10px;
+}
+.trending a {
+    outline: solid black 1px;
+}
+.posts {
+    display: grid;
+    grid-template-rows: 20px 40px;
+    grid-gap: 5px;
+    
+    align-content: center;
+    justify-content: center;
+}
+.post{
+    display: grid;
+    grid-template: 
+    "post-like post-text    post-text  post-text post-text    post-join" 1fr
+    "post-like post-comments post-share post-save post-ellipsis post-join"  60px/
+       30px      1.5fr          1fr       1fr       1fr          40px;
+
+       
+       grid-gap: 5px;
+       align-content: center;
+       padding: auto;
+       justify-content: center;
+}
+.post-text{
+    grid-area: post-text;
+    outline: solid black 1px;
+}
+.post-like{
+    grid-area: post-like;
+    outline: solid black 1px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-rows: 30px, 30px, 30px;
+}
+.post-comments{
+    grid-area: post-comments;
+    outline: solid black 1px;
+    display: grid;
+    grid-template-columns: 20px 40px;
+    grid-gap: 5px;
+    align-content: center;
+    justify-content: center;
+    padding: 3px;
+    
+}
+.post-share{
+    grid-area: post-share;
+    outline: solid black 1px;
+    display: grid;
+    grid-template-columns: 20px 40px;
+    grid-gap: 5px;
+    justify-content: center;
+    padding: 3px;
+    align-content: center;
+}
+.post-save{
+    grid-area: post-save;
+    outline: solid black 1px;
+    display: grid;
+    grid-template-columns: 20px 40px;
+    grid-gap: 5px;
+    justify-content: center;
+    padding: 3px;
+    align-content: center;
+}
+.post-ellipsis{
+    grid-area: post-ellipsis;
+    outline: solid black 1px;
+    display: grid;
+    grid-template-columns: 40px;
+    
+    justify-content: center;
+    padding: 3px;
+    align-content: center;
+}
+.post-join{
+    grid-area: post-join;
+    outline: solid black 1px;
+    display: grid;
+    grid-template-columns: 10px 15px;
+    grid-gap: 5px;
+    justify-items: center;
+    padding: 3px;
+    align-content: center;
+}
